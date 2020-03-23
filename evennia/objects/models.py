@@ -361,4 +361,4 @@ class ObjectDB(TypedObject):
 
         verbose_name = "Object"
         verbose_name_plural = "Objects"
-        cover = object.ImageField(upload_to='images/')
+        cover = models.ImageField(upload_to='images/')
