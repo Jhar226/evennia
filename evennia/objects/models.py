@@ -189,6 +189,9 @@ class ObjectDB(TypedObject):
         verbose_name="session id",
         help_text="csv list of session ids of connected Account, if any.",
     )
+
+    image = models.ImageField(upload_to='character_image', blank=True)
+
     # The location in the game world. Since this one is likely
     # to change often, we set this with the 'location' property
     # to transparently handle Typeclassing.
@@ -361,7 +364,3 @@ class ObjectDB(TypedObject):
 
         verbose_name = "Object"
         verbose_name_plural = "Objects"
-
-
-    class Media(models.Model):
-        image = models.ImageField(upload_to='character_image', blank=True)
