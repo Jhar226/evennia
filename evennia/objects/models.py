@@ -83,6 +83,10 @@ class ContentsHandler(object):
                 logger.log_err("contents cache failed for %s." % self.obj.key)
                 return list(ObjectDB.objects.filter(db_location=self.obj))
 
+
+    image = models.ImageField(upload_to='character_image', blank=True)
+
+
     def add(self, obj):
         """
         Add a new object to this location
