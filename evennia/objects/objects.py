@@ -33,8 +33,6 @@ from evennia.utils.utils import (
 )
 from django.utils.translation import gettext as _
 
-from .models import Media
-
 _INFLECT = inflect.engine()
 _MULTISESSION_MODE = settings.MULTISESSION_MODE
 
