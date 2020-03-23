@@ -191,11 +191,11 @@ class ObjectDB(TypedObject):
     )
 
     # ImageField
-    db_image = models.ImageField(
-        upload_to='character_image',
-        verbose_name="character image",
-        help_text="Upload an image here",
-    )
+    #db_image = models.ImageField(
+    #    upload_to='character_image',
+    #    verbose_name="character image",
+    #    help_text="Upload an image here",
+    #)
 
     # The location in the game world. Since this one is likely
     # to change often, we set this with the 'location' property
