@@ -23,7 +23,7 @@
               {% endfor %}
             {% endif %}
           
-            <img src="{{ objects.image }}" alt="" />
+            <img src="{{ objects.image.url }}" alt="" />
 
           <form method="post" action="?">
             {% csrf_token %}
