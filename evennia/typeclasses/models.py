@@ -186,11 +186,7 @@ class TypedObject(SharedMemoryModel):
     db_key = models.CharField("key", max_length=255, db_index=True)
 
     # ImageField
-    db_image = models.ImageField(
-        upload_to='character_image',
-        verbose_name="character image",
-        help_text="Upload an image here",
-    )
+    db_image = models.ImageField(upload_to='character_image')
 
     # This is the python path to the type class this object is tied to. The
     # typeclass is what defines what kind of Object this is)
