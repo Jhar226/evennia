@@ -34,22 +34,22 @@
     <div id="top"><a href="#main-content" class="sr-only sr-only-focusable">Skip to main content.</a></div>
     {% include "website/_menu.html" %}
     <div class="container main-content mt-4" id="main-copy">
-        <div class="row">
-            <!--{% if sidebar %}-->
-            <div class="col-4">
-                {% block sidebar %}
-                {% endblock %}
-            </div>
-            <!--{% endif %}-->
-            <div class="{% if sidebar %}col-8{% else %}col{% endif %}">
-                {% include 'website/messages.html' %}
-
-                {% block content %}
-                {% endblock %}
-
-                {% include 'website/pagination.html' %}
-            </div>
+      <div class="row">
+        {% if sidebar %}
+        <div class="col-4">
+          {% block sidebar %}
+          {% endblock %}
         </div>
+        {% endif %}
+        <div class="{% if sidebar %}col-8{% else %}col{% endif %}">
+          {% include 'website/messages.html' %}
+
+          {% block content %}
+          {% endblock %}
+
+          {% include 'website/pagination.html' %}
+        </div>
+      </div>
     </div>
 
     <footer class="footer">
