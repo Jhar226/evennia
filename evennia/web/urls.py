@@ -8,6 +8,8 @@
 
 from django.urls import path, include
 from django.views.generic import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
 
 # Setup the root url tree from /
 
@@ -19,4 +21,4 @@ urlpatterns = [
     path("webclient/", include("evennia.web.webclient.urls")),
     # favicon
     path("favicon.ico", RedirectView.as_view(url="/media/images/favicon.ico", permanent=False)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
