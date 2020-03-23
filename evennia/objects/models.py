@@ -363,5 +363,9 @@ class ObjectDB(TypedObject):
         verbose_name_plural = "Objects"
 
 
-    class Media(models.Model):
-        cover = models.ImageField(upload_to='images/')
+class Post(models.Model):
+    title = models.TextField()
+    cover = models.ImageField(upload_to='images/')
+
+    def __str__(self):
+        return self.title
