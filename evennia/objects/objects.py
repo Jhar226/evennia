@@ -33,6 +33,8 @@ from evennia.utils.utils import (
 )
 from django.utils.translation import gettext as _
 
+from .models import Media
+
 _INFLECT = inflect.engine()
 _MULTISESSION_MODE = settings.MULTISESSION_MODE
 
@@ -2065,6 +2067,9 @@ class DefaultCharacter(DefaultObject):
 
         # Set the supplied key as the name of the intended object
         kwargs["key"] = key
+
+        # Set character image
+        obj.image(Media)
 
         # Get home for character
         kwargs["home"] = ObjectDB.objects.get_id(kwargs.get("home", settings.DEFAULT_HOME))

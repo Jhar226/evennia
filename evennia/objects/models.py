@@ -361,3 +361,7 @@ class ObjectDB(TypedObject):
 
         verbose_name = "Object"
         verbose_name_plural = "Objects"
+
+
+    class Media(models.Model):
+        cover = models.ImageField(upload_to='images/')

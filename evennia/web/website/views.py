@@ -779,9 +779,12 @@ class CharacterCreateView(CharacterMixin, ObjectCreateView):
         # Get attributes from the form
         self.attributes = {k: form.cleaned_data[k] for k in form.cleaned_data.keys()}
         charname = self.attributes.pop("db_key")
+        
+        ## Media goes here.
+
         description = self.attributes.pop("desc")
         # Create a character
-        character, errors = self.typeclass.create(charname, account, description=description)
+        character, errors = self.typeclass.create(charname, image, account, description=description)
 
         if errors:
             # Echo error messages to the user
