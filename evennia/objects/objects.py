@@ -2067,7 +2067,7 @@ class DefaultCharacter(DefaultObject):
         kwargs["key"] = key
 
         # Set character image
-        ## 
+        image = models.ImageField(upload_to='character_image', blank=True)
 
         # Get home for character
         kwargs["home"] = ObjectDB.objects.get_id(kwargs.get("home", settings.DEFAULT_HOME))
