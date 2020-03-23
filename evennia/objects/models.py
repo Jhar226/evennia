@@ -193,7 +193,6 @@ class ObjectDB(TypedObject):
     # ImageField
     db_image = models.ImageField(
         upload_to='character_image',
-        blank=True,
         verbose_name="character image",
         help_text="Upload an image here",
     )
