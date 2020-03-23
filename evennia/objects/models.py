@@ -190,7 +190,13 @@ class ObjectDB(TypedObject):
         help_text="csv list of session ids of connected Account, if any.",
     )
 
-    image = models.ImageField(upload_to='character_image', blank=True)
+    # ImageField
+    db_image = models.ImageField(
+        upload_to='character_image',
+        blank=True,
+        verbose_name="character image",
+        help_text="Upload an image here",
+    )
 
     # The location in the game world. Since this one is likely
     # to change often, we set this with the 'location' property
