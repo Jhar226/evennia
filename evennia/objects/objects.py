@@ -2069,7 +2069,7 @@ class DefaultCharacter(DefaultObject):
         kwargs["key"] = key
 
         # Set character image
-        obj.image(Media)
+        kwarfs["image"] = Media
 
         # Get home for character
         kwargs["home"] = ObjectDB.objects.get_id(kwargs.get("home", settings.DEFAULT_HOME))
