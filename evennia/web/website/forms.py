@@ -149,18 +149,25 @@ class CharacterForm(ObjectForm):
         labels = {"db_key": "Name"}
 
     # Fields pertaining to configurable attributes on the Character object.
+
+    image = forms.ImageField(
+        upload_to="character_image",
+        blank=True,
+        help_text="This is your characters profile image.",
+	)
+
+    age = forms.IntegerField(
+        label="This character's age",
+        min_value=0, max_value=9000000,
+        help_text="How old is this character in years?",
+    )
+
     desc = forms.CharField(
         label="Description",
         max_length=2048,
         required=False,
         widget=forms.Textarea(attrs={"rows": 3}),
         help_text="A brief description of your character.",
-    )
-
-    age = forms.IntegerField(
-        label="Your Age",
-        min_value=18, max_value=9000,
-        help_text="Years since your birth."
     )
 
 
