@@ -157,6 +157,12 @@ class CharacterForm(ObjectForm):
         help_text="A brief description of your character.",
     )
 
+    age = forms.IntegerField(
+        label="Your Age",
+        min_value=18, max_value=9000,
+        help_text="Years since your birth."
+    )
+
 
 class CharacterUpdateForm(CharacterForm):
     """

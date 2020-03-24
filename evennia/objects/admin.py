@@ -47,7 +47,7 @@ class ObjectCreateForm(forms.ModelForm):
         "If creating a Character, check so the name is unique among characters!",
     )
 
-    db_image = models.ImageField(null=True, upload_to='character_image', verbose_name="characterimage", blank=True)
+
 
     db_typeclass_path = forms.CharField(
         label="Typeclass",
