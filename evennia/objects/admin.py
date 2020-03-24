@@ -49,6 +49,8 @@ class ObjectCreateForm(forms.ModelForm):
 
     db_age = forms.CharField(
         label="Age",
+        initial="",
+        required=False,
         help_text="The characters age.",
 	)
 
