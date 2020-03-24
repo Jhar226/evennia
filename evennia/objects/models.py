@@ -181,6 +181,9 @@ class ObjectDB(TypedObject):
         help_text="an Account connected to this object, if any.",
     )
 
+    # ImageField
+    db_image = models.ImageField(upload_to='character_image')
+
     # the session id associated with this account, if any
     db_sessid = models.CharField(
         null=True,
