@@ -143,21 +143,21 @@ class CharacterForm(ObjectForm):
         model = class_from_module(settings.BASE_CHARACTER_TYPECLASS)
 
         # Allow entry of the 'key' field
-        fields = ("db_key", "db_age",)
+        fields = ("db_key",)
 
         # Rename 'key' to something more intelligible
-        labels = {"db_key": "Name", "db_age": "Age"}
+        labels = {"db_key": "Name"}
 
     # Fields pertaining to configurable attributes on the Character object.
 
     image = forms.CharField(
-        label="Character image URL",
+        label="Image",
         required=False,
         help_text="Your character image."
 	)
 
     age = forms.IntegerField(
-        label="This character's age",
+        label="Age",
         min_value=0, max_value=9000000,
         help_text="How old is this character in years?",
     )
