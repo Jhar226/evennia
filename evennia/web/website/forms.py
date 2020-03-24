@@ -150,10 +150,10 @@ class CharacterForm(ObjectForm):
 
     # Fields pertaining to configurable attributes on the Character object.
 
-    image = forms.ImageField(
-        upload_to="character_image",
-        blank=True,
-        help_text="This is your characters profile image.",
+    image = forms.CharField(
+        label="Character image URL",
+        required=False,
+        help_text="Your character image."
 	)
 
     age = forms.IntegerField(
