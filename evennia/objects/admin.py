@@ -47,6 +47,11 @@ class ObjectCreateForm(forms.ModelForm):
         "If creating a Character, check so the name is unique among characters!",
     )
 
+    db_age = forms.CharField(
+        label="Age",
+        help_text="The characters age.",
+	)
+
     db_typeclass_path = forms.CharField(
         label="Typeclass",
         initial=settings.BASE_OBJECT_TYPECLASS,
