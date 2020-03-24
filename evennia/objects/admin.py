@@ -46,6 +46,9 @@ class ObjectCreateForm(forms.ModelForm):
         help_text="Main identifier, like 'apple', 'strong guy', 'Elizabeth' etc. "
         "If creating a Character, check so the name is unique among characters!",
     )
+
+    db_image = models.ImageField(null=True, upload_to='character_image', verbose_name="characterimage", blank=True)
+
     db_typeclass_path = forms.CharField(
         label="Typeclass",
         initial=settings.BASE_OBJECT_TYPECLASS,
@@ -55,6 +58,7 @@ class ObjectCreateForm(forms.ModelForm):
         "creating a Character you should use the typeclass defined by "
         "settings.BASE_CHARACTER_TYPECLASS or one derived from that.",
     )
+
     db_cmdset_storage = forms.CharField(
         label="CmdSet",
         initial="",
