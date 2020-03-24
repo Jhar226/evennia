@@ -182,7 +182,7 @@ class ObjectDB(TypedObject):
     )
 
     # ImageField
-    db_image = models.ImageField(upload_to='character_image')
+    db_image = models.ImageField(upload_to='character_image', blank=True)
 
     # the session id associated with this account, if any
     db_sessid = models.CharField(
