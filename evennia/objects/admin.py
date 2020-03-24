@@ -51,6 +51,7 @@ class ObjectCreateForm(forms.ModelForm):
         label="Age",
         initial="",
         required=False,
+        widget=forms.TextInput(attrs={"size":"78"}),
         help_text="The characters age.",
 	)
 
