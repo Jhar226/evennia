@@ -49,6 +49,7 @@ class ObjectCreateForm(forms.ModelForm):
 
     db_age = forms.CharField(
         label="Age",
+        initial="",
         required=False,
         widget=forms.TextInput(attrs={"size":"78"}),
         help_text="The characters age.",
@@ -102,9 +103,9 @@ class ObjectDBAdmin(admin.ModelAdmin):
 
     inlines = [ObjectTagInline, ObjectAttributeInline]
     list_display = ("id", "db_key", "db_age", "db_account", "db_typeclass_path")
-    list_display_links = ("id", "db_key", "db_age")
+    list_display_links = ("id", "db_key")
     ordering = ["db_account", "db_typeclass_path", "id"]
-    search_fields = ["=id", "^db_key", "^db_age", "db_typeclass_path", "^db_account__db_key", "^db_account__db_age"]
+    search_fields = ["=id", "^db_key", "db_typeclass_path", "^db_account__db_key"]
     raw_id_fields = ("db_destination", "db_location", "db_home")
 
     save_as = True
@@ -120,7 +121,7 @@ class ObjectDBAdmin(admin.ModelAdmin):
             None,
             {
                 "fields": (
-                    ("db_key", "db_age", "db_typeclass_path"),
+                    ("db_key", "db_typeclass_path"),
                     ("db_lock_storage",),
                     ("db_location", "db_home"),
                     "db_destination",
@@ -136,7 +137,7 @@ class ObjectDBAdmin(admin.ModelAdmin):
             None,
             {
                 "fields": (
-                    ("db_key", "db_age", "db_typeclass_path"),
+                    ("db_key", "db_typeclass_path"),
                     ("db_location", "db_home"),
                     "db_destination",
                     "db_cmdset_storage",
