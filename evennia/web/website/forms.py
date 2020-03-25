@@ -150,17 +150,17 @@ class CharacterForm(ObjectForm):
 
     # Fields pertaining to configurable attributes on the Character object.
 
-    image = forms.CharField(
-        label="Image",
-        required=False,
-        help_text="Your character image."
-	)
+    #image = forms.CharField(
+    #    label="Image",
+    #    required=False,
+    #    help_text="Your character image."
+	#)
 
-    age = forms.IntegerField(
-        label="Age",
-        min_value=0, max_value=9000000,
-        help_text="How old is this character in years?",
-    )
+    #age = forms.IntegerField(
+    #    label="Age",
+    #    min_value=0, max_value=9000000,
+    #    help_text="How old is this character in years?",
+    #)
 
     desc = forms.CharField(
         label="Description",
