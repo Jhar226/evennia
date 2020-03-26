@@ -2,11 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\objects",
+    "\\typeclasses",
     "\\web",
     "\\web\\website",
     "\\web\\website\\templates",
     "\\web\\website\\templates\\website"
   ],
-  "SelectedNode": "\\web\\website\\templates\\website\\character_form.html",
+  "SelectedNode": "\\objects\\objects.py",
   "PreviewInSolutionExplorer": false
 }
