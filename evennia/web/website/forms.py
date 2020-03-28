@@ -150,8 +150,7 @@ class CharacterForm(ObjectForm):
 
     # Fields pertaining to configurable attributes on the Character object.
 
-    image = forms.URLField(
-        initial='http://'
+    image = forms.CharField(
         required=False,
         help_text="Your character image."
 	)
