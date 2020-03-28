@@ -143,7 +143,7 @@ class CharacterForm(ObjectForm):
         model = class_from_module(settings.BASE_CHARACTER_TYPECLASS)
 
         # Allow entry of the 'key' field
-        fields = ("db_key", "image", "age")
+        fields = ("db_key",)
 
         # Rename 'key' to something more intelligible
         labels = {"db_key": "Name"}
