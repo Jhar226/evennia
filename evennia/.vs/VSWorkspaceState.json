@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\web",
-    "\\web\\website",
-    "\\web\\website\\templates",
-    "\\web\\website\\templates\\website",
-    "\\web\\website\\templates\\website\\flatpages"
+    ""
   ],
-  "SelectedNode": "\\web\\website\\templates\\website\\index.html",
+  "SelectedNode": "\\objects\\models.py",
   "PreviewInSolutionExplorer": false
 }
