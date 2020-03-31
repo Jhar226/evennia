@@ -5,6 +5,8 @@ from django.forms import ModelForm
 from django.utils.html import escape
 from evennia.utils import class_from_module
 
+from django.db import models
+
 class EvenniaForm(forms.Form):
     """
     This is a stock Django form, but modified so that all values provided
@@ -149,7 +151,7 @@ class CharacterForm(ObjectForm):
 
     # Fields pertaining to configurable attributes on the Character object.
 
-    image = forms.CharField(
+    image = models.ImageField(
         required=False,
         help_text="Your character image."
 	)
