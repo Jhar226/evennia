@@ -283,7 +283,7 @@ class ObjectDetailView(EvenniaDetailView):
     # What attributes of the object you wish to display on the page. Model-level
     # attributes will take precedence over identically-named db.attributes!
     # The order you specify here will be followed.
-    attributes = ["name", "url", "age", "desc"]
+    attributes = ["name", "desc"]
 
     def get_context_data(self, **kwargs):
         """
@@ -719,7 +719,7 @@ class CharacterDetailView(CharacterMixin, ObjectDetailView):
 
     # -- Evennia constructs --
     # What attributes to display for this object
-    attributes = ["name", "desc"]
+    attributes = ["name", "url", "age", "desc"]
     access_type = "view"
 
     def get_queryset(self):
