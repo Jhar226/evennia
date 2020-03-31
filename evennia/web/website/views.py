@@ -722,6 +722,8 @@ class CharacterDetailView(CharacterMixin, ObjectDetailView):
     attributes = ["name", "image", "age", "desc"]
     access_type = "view"
 
+    attribute_image = "image"
+
     def get_queryset(self):
         """
         This method will override the Django get_queryset method to return a
