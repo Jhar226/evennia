@@ -156,9 +156,6 @@ class CharacterForm(ObjectForm):
         help_text="Your character image."
 	)
 
-    file = cStringIO.StringIO(urllib.urlopen(URL).read())
-    img = Image.open(file)
-
     age = forms.IntegerField(
         label="Age",
         required=False,
