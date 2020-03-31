@@ -14,26 +14,28 @@
         <h1 class="card-title">{{ view.page_title }}</h1>
         <hr />
 
-        <div class="row">
+        <!--<div class="row">
           
-          <!-- left/avatar column -->
-          <div class="col-lg-3 col-sm-12">
-            <img class="d-flex mr-3" src="{{ attribute_image.value }}"  width="250" height="250">
-          </div>
-          <!-- end left/avatar column -->
+        left/avatar column 
+        <div class="col-lg-3 col-sm-12">
+        <img class="d-flex mr-3" src="{{ attribute_image.value }}"  width="250" height="250">
+        </div>-->
+        <!-- end left/avatar column -->
           
-          <!-- right/content column -->
-          <div class="col-lg-9 col-sm-12">
             <dl>
             {% for attribute, value in attribute_list.items %}
-              <dt>{{ attribute }}</dt>
-              <dd>{{ value }}</dd>
+                <dt>{{ attribute }}</dt>
+                <dd>{{ value }}</dd>
             {% endfor %}
             </dl>
-          </div>
-          <!-- end right/content column -->
-          
+
+        <!-- right/content column
+        <div class="col-lg-9 col-sm-12">
+
         </div>
+        end right/content column
+          
+        </div> -->
           
       </div>
     </div>
