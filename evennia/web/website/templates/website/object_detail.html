@@ -17,9 +17,11 @@
         <div class="row">
           
           <!-- left/avatar column -->
-          <div class="col-lg-3 col-sm-12">
-            <img class="d-flex mr-3" src="{{ attribute_list.items.attribute.image }}"  width="250" height="250">
-          </div>
+            <div class="col-lg-3 col-sm-12">
+                {% for attribute, value in attribute_list.items %}
+                <img class="d-flex mr-3" src="{{ image }}" width="250" height="250">
+                {% endfor %}
+            </div>
           <!-- end left/avatar column -->
           
           <!-- right/content column -->
