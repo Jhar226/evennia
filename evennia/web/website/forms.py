@@ -5,6 +5,7 @@ from django.forms import ModelForm
 from django.utils.html import escape
 from evennia.utils import class_from_module
 
+import urllib, cStringIO
 
 class EvenniaForm(forms.Form):
     """
@@ -154,6 +155,9 @@ class CharacterForm(ObjectForm):
         required=False,
         help_text="Your character image."
 	)
+
+    file = cStringIO.StringIO(urllib.urlopen(URL).read())
+    img = Image.open(file)
 
     age = forms.IntegerField(
         label="Age",
