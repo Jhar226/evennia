@@ -5,8 +5,6 @@ from django.forms import ModelForm
 from django.utils.html import escape
 from evennia.utils import class_from_module
 
-import urllib, cStringIO
-
 class EvenniaForm(forms.Form):
     """
     This is a stock Django form, but modified so that all values provided
