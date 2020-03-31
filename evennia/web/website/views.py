@@ -719,7 +719,7 @@ class CharacterDetailView(CharacterMixin, ObjectDetailView):
 
     # -- Evennia constructs --
     # What attributes to display for this object
-    attributes = ["name", "image", "age", "desc"]
+    attributes = ["name", "image", "age", "race", "archetype", "desc"]
     access_type = "view"
 
     def get_queryset(self):
